@@ -75,13 +75,13 @@ const listDoctor = () => {
                 {/* list */}
                 <div className={styles.listInfors}>
                     <ul>
-                        {data?.map((item, index) => {
+                        {/* {data?.map((item, index) => {
                             return <li key={index} >
                                 {
                                     JSON.stringify(item, undefined, 2)
                                 }
                             </li>
-                        })}
+                        })} */}
                     </ul>
                     <div hidden className={styles.listInfor}>
                         <div className={styles.imgList}>
