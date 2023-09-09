@@ -3,7 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import { use, useEffect, useState } from 'react';
 import styles from './listDoctor.module.css';
-import Example from '../Modal/Example';
+import Example from '../Modal/page';
 
 
 const listDoctor = () => {
