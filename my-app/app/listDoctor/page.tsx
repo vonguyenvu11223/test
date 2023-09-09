@@ -3,16 +3,13 @@ import axios from 'axios';
 import Link from 'next/link';
 import { use, useEffect, useState } from 'react';
 import styles from './listDoctor.module.css';
-import Example from '../Modal/page';
 
 
 const listDoctor = () => {
     const [data, setData] = useState<any[]>([]);
-    const [detail, setDetail] = useState<any[]>([]);
     const [search, setSearch] = useState('');
 
     const url = "https://api-medigo-development.mdsco.vn/doctors";
-    const url1 = "https://api-medigo-development.mdsco.vn/doctor/detail?doctor_id=9";
 
     useEffect(() => {
         axios.get(url)
@@ -22,26 +19,9 @@ const listDoctor = () => {
             });
     }, [])
 
-    useEffect(() => {
-        axios.get(url1)
-            .then(function (response) {
-                setDetail(response.data);
-                console.log(response);
-            }).catch(function (error) {
-            });
-    }, [])
-
-    const handlSearch = (event: any) => {
-        setSearch(event.target.value);
-    }
 
     return (
         <div className={styles.wrapper}>
-            <header className={styles.header}>
-                <Link href={'/'}>Home</Link>
-                <span>/</span>
-                <Link href={'/listDoctor'}>Danh sách bác sĩ</Link>
-            </header>
             <div className={styles.container}>
 
                 <div className={styles.names}>
@@ -50,9 +30,9 @@ const listDoctor = () => {
 
 
                 {/* input */}
-                {/* <div className={styles.input}>
+                <div className={styles.input}>
                     <div className="">
-                        <input style={{ color: 'black' }} className={styles.inputname} type="text" placeholder='Tìm nhanh bác sĩ' onChange={handlSearch} />
+                        <input style={{ color: 'black' }} className={styles.inputname} type="text" placeholder='Tìm nhanh bác sĩ' onChange={(e) => setSearch(e.target.value)} />
                     </div>
                     <div className={styles.inputLists}>
                         <div>
@@ -96,7 +76,7 @@ const listDoctor = () => {
                             </select>
                         </div>
                     </div>
-                </div> */}
+                </div>
 
                 {/* list */}
                 <div className={styles.listInfors}>
@@ -104,7 +84,7 @@ const listDoctor = () => {
                         return search.toLocaleLowerCase() === '' ? item : item.full_name.toLocaleLowerCase().includes(search);
                     }).map((item, index) => {
                         return (
-                            <div hidden className={styles.listInfor} key={index}>
+                            <div hidden className={styles.listInfor} key={item.id}>
                                 <div className={styles.imgList}>
                                     <img src="https://medigo.mdsco.vn/img/doctor.svg" alt="" />
                                 </div>
@@ -123,16 +103,6 @@ const listDoctor = () => {
                         )
                     })}
                 </div>
-                {/* test */}
-                {/* <div>
-                    <ul>
-                        {detail.map((item,index) => {
-                            return(
-                                <li key={index}>{item.full_name}</li>
-                            )
-                        })}
-                    </ul>
-                </div> */}
                 <div>
                 </div>
             </div>
