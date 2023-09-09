@@ -4,6 +4,7 @@
     gap: 10px;
     background-color: #2196F3;
     padding: 10px;
+    grid-template-rows: 100px 100px 100px;
 }
 
 .avoid {
@@ -12,7 +13,6 @@
 
 .box {
     background-color: #ccc;
-    margin-bottom: 10px;
     padding: 10px;
     border-radius: 8px;
 }
