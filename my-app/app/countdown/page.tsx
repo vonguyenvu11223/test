@@ -4,13 +4,13 @@ import { use, useEffect, useState } from 'react';
 import styles from './down.module.css'
 
 const Countdown = () => {
-    const [count, setCount] = useState<any>()
-    const [value, setValue] = useState<any>();
+    const [count, setCount] = useState<number>()
+    const [value, setValue] = useState<number>();
 
 
     useEffect(() => {
         const time = setTimeout(() => {
-            setCount(prevState => prevState - 1);
+            setCount((prevState) => prevState - 1);
         }, 1000)
         return () => clearInterval(time);
     }, [count])

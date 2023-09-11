@@ -30,7 +30,7 @@ const listDoctor = () => {
 
 
                 {/* input */}
-                <div className={styles.input}>
+                {/* <div className={styles.input}>
                     <div className="">
                         <input style={{ color: 'black' }} className={styles.inputname} type="text" placeholder='Tìm nhanh bác sĩ' onChange={(e) => setSearch(e.target.value)} />
                     </div>
@@ -40,7 +40,7 @@ const listDoctor = () => {
                                 <option value="">Name</option>
                                 {data.map((item, index) => {
                                     return (
-                                        <option key={item.name} value={item.name}>{item.name}</option>
+                                        <option key={item.index} value={item.sex}>{item.sex}</option>
                                     )
                                 })}
                             </select>
@@ -50,7 +50,7 @@ const listDoctor = () => {
                                 <option value="">Username</option>
                                 {data.map((item, index) => {
                                     return (
-                                        <option key={item.username} value={item.username} >{item.username}</option>
+                                        <option key={item.index} value={item.full_name} >{item.full_name}</option>
                                     )
                                 })}
                             </select>
@@ -60,7 +60,7 @@ const listDoctor = () => {
                                 <option value="">website</option>
                                 {data.map((item, index) => {
                                     return (
-                                        <option key={item.website} value={item.website}>{item.website}</option>
+                                        <option key={item.index} value={item.role}>{item.role}</option>
                                     )
                                 })}
                             </select>
@@ -70,13 +70,13 @@ const listDoctor = () => {
                                 <option value="">Phone</option>
                                 {data.map((item, index) => {
                                     return (
-                                        <option key={item.phone} value={item.phone}>{item.phone}</option>
+                                        <option key={item.index} value={item.id}>{item.phone}</option>
                                     )
                                 })}
                             </select>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* list */}
                 <div className={styles.listInfors}>
@@ -85,7 +85,7 @@ const listDoctor = () => {
                     }).map((item, index) => {
                         return (
                             <div hidden className={styles.listInfor} key={item.id}>
-                                <div className={styles.imgList}>
+                                <div className={styles.imgList} >
                                     <img src="https://medigo.mdsco.vn/img/doctor.svg" alt="" />
                                 </div>
                                 <div className={styles.chucnangList}>

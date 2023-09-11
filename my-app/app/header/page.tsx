@@ -1,6 +1,6 @@
 'use client'
 import Container from 'react-bootstrap/Container';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -15,12 +15,12 @@ function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Link href={'/'} className='nav-link'>Home</Link>
-                        <span> - </span>
                         <Link href={'/masonry'} className='nav-link'>masonry</Link>
-                        <span> - </span>
+                        {/* <span> - </span> */}
                         <Link href={'/listDoctor'} className='nav-link'>Listdoctor</Link>
-                        <span> - </span>
+                        {/* <span> - </span> */}
                         <Link href={'/countdown'} className='nav-link'>countdown</Link>
+                        <Link href={'/todo'} className='nav-link'>Todo</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
