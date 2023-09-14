@@ -1,0 +1,21 @@
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.input input {
+  font-size: 30px;
+}
+.input button {
+  font-size: 30px;
+}
+
+.container ul {
+  text-align: center;
+}
+.container ul li {
+  list-style: none;
+  color: red;
+  font-size: 30px;
+}/*# sourceMappingURL=todu.module.css.map */
