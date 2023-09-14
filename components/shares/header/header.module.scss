@@ -1,0 +1,26 @@
+.container {
+    background-color: #ccc;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    .wrapper {
+        width: 100%;
+
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                padding: 20px;
+                margin-left: 5px;
+                a {
+                    text-decoration: none;
+                }
+                &:hover {
+                    background-color: aqua;
+                }
+            }
+        }
+    }
+}

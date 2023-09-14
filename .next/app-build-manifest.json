@@ -1,22 +1,40 @@
 {
   "pages": {
+    "/listDoctor/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/listDoctor/page.css",
+      "static/chunks/app/listDoctor/page.js"
+    ],
+    "/masonry/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/masonry/page.css",
+      "static/chunks/app/masonry/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/test/page": [
+    "/countdown/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/test/page.css",
-      "static/chunks/app/test/page.js"
+      "static/css/app/countdown/page.css",
+      "static/chunks/app/countdown/page.js"
     ],
-    "/listDoctor/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/listDoctor/page.css",
-      "static/chunks/app/listDoctor/page.js"
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/todo/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/todo/page.css",
+      "static/chunks/app/todo/page.js"
     ]
   }
 }

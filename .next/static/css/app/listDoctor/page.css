@@ -1,59 +1,27 @@
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./app/listDoctor/modal.module.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.modal_modal__IoNFy {
-  display: block;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.modal_modal__IoNFy .modal_modal-content__kVLjA {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-.modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-.modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF:hover, .modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./app/listDoctor/listDoctor.module.scss ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.listDoctor_wrapper__eWK_W {
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./components/screens/listdoctor/listDoctor.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.listDoctor_wrapper__fAu5N {
   background-color: white;
   color: black;
 }
 
-.listDoctor_name__xjzZp {
+.listDoctor_name__2JMBY {
   border-bottom: green;
 }
 
-.listDoctor_container__qnQ_c {
+.listDoctor_container__YiQdW {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.listDoctor_input__3JbCB {
+.listDoctor_input__XYXpw {
   margin-top: 70px;
 }
 
-.listDoctor_inputname__8Bkep {
+.listDoctor_inputname___cn7y {
   width: 1200px;
   background-color: white;
   border-radius: 5px;
@@ -61,13 +29,13 @@
   outline: green;
 }
 
-.listDoctor_inputLists__skvCP {
+.listDoctor_inputLists__veacG {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-.listDoctor_inputList__4_AK7 {
+.listDoctor_inputList__7x8xr {
   background-color: white;
   color: black;
   width: 290px;
@@ -75,12 +43,12 @@
   padding: 8px;
 }
 
-.listDoctor_imgList__jRksY > img {
+.listDoctor_imgList__1G9t0 > img {
   width: 195px;
   height: 195px;
 }
 
-.listDoctor_listInfors__xKXn4 {
+.listDoctor_listInfors__CSDcZ {
   display: grid;
   grid-gap: 50px 100px;
   gap: 50px 100px;
@@ -93,7 +61,7 @@
   width: 1200px;
 }
 
-.listDoctor_listInfor__eEsW2 {
+.listDoctor_listInfor__I102f {
   background-color: #ccc;
   width: 385px;
   height: 364px;
@@ -104,7 +72,7 @@
   align-items: center;
 }
 
-.listDoctor_detail__8cejL > button {
+.listDoctor_detail__qlhNV > button {
   margin-top: 5px;
   background-color: green;
   color: white;

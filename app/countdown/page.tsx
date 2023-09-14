@@ -1,34 +1,39 @@
-'use client'
-import React from "react";
+'use client';
+import React from 'react';
 import { use, useEffect, useState } from 'react';
-import styles from './down.module.css'
+import styles from './down.module.css';
 
 const Countdown = () => {
-    const [count, setCount] = useState<number>()
+    const [count, setCount] = useState<number>();
     const [value, setValue] = useState<number>();
 
-
     useEffect(() => {
-        const time = setTimeout(() => {
+        const time = setInterval(() => {
             setCount((prevState) => prevState - 1);
-        }, 1000)
+        }, 1000);
         return () => clearInterval(time);
-    }, [count])
+    }, [count]);
 
     const handleClick = () => {
         setCount(value);
-    }
+    };
 
     return (
-
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <input className={styles.input} type='number' placeholder="input" onChange={(e: any) => setValue(e.target.value)} />
-                <button className={styles.button} onClick={handleClick}>Click</button>
+                <input
+                    className={styles.input}
+                    type="number"
+                    placeholder="input"
+                    onChange={(e: any) => setValue(e.target.value)}
+                />
+                <button className={styles.button} onClick={handleClick}>
+                    Click
+                </button>
             </div>
             <h1 className={styles.h1}>{count || 'Nhập dữ liệu'}</h1>
         </div>
-    )
-}
+    );
+};
 
 export default Countdown;
