@@ -2,37 +2,30 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./app/listDoctor/modal.module.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .modal_modal__IoNFy {
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
-/* Modal Content/Box */
-.modal_modal-content__kVLjA {
+.modal_modal__IoNFy .modal_modal-content__kVLjA {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
-
-/* The Close Button */
-.modal_close__Fx3JF {
+.modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-
-.modal_close__Fx3JF:hover,
-.modal_close__Fx3JF:focus {
+.modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF:hover, .modal_modal__IoNFy .modal_modal-content__kVLjA .modal_close__Fx3JF:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

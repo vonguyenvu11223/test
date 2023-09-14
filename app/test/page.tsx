@@ -2,7 +2,7 @@
 import cx from 'classnames';
 import { CSSProperties, useEffect, useState } from 'react';
 import styles from './mansonry.module.scss';
-
+import { useWindowSize } from './useWindowSize';
 const items = [
     '1.Như vậy, qua bài này các bạn cũng hiểu thế nào là Masonry layout và biết cách tạo ra nó rồi nhỉ. Thực lòng mà nói Masonry layout là 1 kiểu layout rất đẹp đúng không các bạn? Mình nghĩ không ít bạn cũng muốn sử dụng kiểu layout như thế này mà chưa tìm được phương pháp tối ưu nhất. Bây giờ thì các bạn có thể dễ dàng sử dụng layout này cho web của mình rồi. Chúc các bạn thành công!',
     '2.Trước khi học về CSS3 Multi-columnTrước khi học về CSS3 Multi-column Trước khi học về CSS3 Multi-column, mình nghĩ mình nên giới thiệu qua cho các bạn hiểu về Masonry layout. Các bạn cùng nhìn ảnh dưới này nhé',
@@ -22,19 +22,16 @@ const items = [
 
 const Test = () => {
     const [columns, setColumns] = useState(4);
-    const [itemWidth, setItemWidth] = useState(0);
-    const array = [];
-
-    const list = Array.from({ length: 4 }, (_, index) => items.filter((item, i) => i % 4 === index));
-    console.log(list);
+    const { width, height } = useWindowSize();
+    const list = Array.from({ length: columns }, (_, index) => items.filter((item, i) => i % columns === index));
 
     const updateColumns = () => {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 768) {
+        const screenWidth = width;
+        if (screenWidth < 500) {
             setColumns(1);
-        } else if (screenWidth < 1024) {
+        } else if (screenWidth < 600) {
             setColumns(2);
-        } else if (screenWidth < 1280) {
+        } else if (screenWidth < 700) {
             setColumns(3);
         } else {
             setColumns(4);
@@ -43,11 +40,7 @@ const Test = () => {
 
     useEffect(() => {
         updateColumns();
-        window.addEventListener('resize', updateColumns);
-        return () => {
-            window.removeEventListener('resize', updateColumns);
-        };
-    }, []);
+    }, [width]);
 
     return (
         <div className={styles.container}>

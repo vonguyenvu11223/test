@@ -6,6 +6,7 @@ import classNames from 'classnames/bind';
 import styles from './listDoctor.module.scss';
 import Modal from './modal';
 import instance from './instance';
+import { isArray } from 'lodash';
 
 const cx = classNames.bind(styles);
 
@@ -13,10 +14,9 @@ const listDoctor = () => {
     const [data, setData] = useState<any[]>([]);
     const [search, setSearch] = useState('');
     const [showModal, setShowModal] = useState(false);
-    console.log(data);
+    const [array, setArray] = useState([]);
 
-    // 1. instance : -> set headers
-    // 2. instance call method
+    console.log(data);
 
     useEffect(() => {
         const api = async () => {
@@ -25,7 +25,7 @@ const listDoctor = () => {
                     limit: 999,
                 },
             });
-            setData(res.data);
+            setData(res.data.doctors);
         };
         api();
     }, []);

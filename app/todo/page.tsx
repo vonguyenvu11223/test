@@ -1,17 +1,16 @@
-'use client'
-import React, { useEffect, useState } from "react"
-import styles from './todu.module.scss'
-import { Prev } from "react-bootstrap/esm/PageItem";
+'use client';
+import React, { useEffect, useState } from 'react';
+import styles from './todu.module.scss';
+import { Prev } from 'react-bootstrap/esm/PageItem';
 
 const Todo = () => {
-
     const [value, setValue] = useState('');
     const [todo, setTodo] = useState<any[]>([]);
 
     const handleClick = () => {
-        setTodo(Prev => [...Prev, value]);
-        setValue("");
-    }
+        setTodo((Prev) => [...Prev, value]);
+        setValue('');
+    };
 
     return (
         <div className={styles.container}>
@@ -25,7 +24,7 @@ const Todo = () => {
                 ))}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default Todo
+export default Todo;

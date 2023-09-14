@@ -1,3 +1,4 @@
 {
-  "/listDoctor/page": "app/listDoctor/page.js"
+  "/listDoctor/page": "app/listDoctor/page.js",
+  "/test/page": "app/test/page.js"
 }

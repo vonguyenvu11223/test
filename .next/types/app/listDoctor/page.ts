@@ -1,4 +1,4 @@
-// File: /Users/vonguyenvu/Documents/nextJS/tesst2/my-app/app/listDoctor/page.tsx
+// File: /Users/vonguyenvu/Documents/nextJS/tesst2/app/listDoctor/page.tsx
 import * as entry from '../../../../app/listDoctor/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

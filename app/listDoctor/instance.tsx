@@ -5,7 +5,6 @@ const url = 'https://api-medigo-development.mdsco.vn';
 
 const instance = axios.create({
     baseURL: url,
-    // timeout: 1000,
     headers: headers,
 });
 
