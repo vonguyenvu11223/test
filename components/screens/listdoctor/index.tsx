@@ -6,6 +6,7 @@ import classNames from 'classnames/bind';
 import styles from './listDoctor.module.scss';
 import instance from './instance';
 import { isArray } from 'lodash';
+import Modal from '@/components/shares/Modal/index'
 
 const cx = classNames.bind(styles);
 
@@ -33,8 +34,10 @@ const ListDoctor = () => {
 
     return (
         <div className={cx('wrapper')}>
+            {showModal && <Modal
+                setShowModal={setShowModal}
+            />}
             <div className={styles.container}>
-                {/* {showModal && <Modal close={setShowModal} />} */}
                 <div className={styles.names}>
                     <h1 style={{ borderBottom: '2px solid green' }}>Danh sách bác sĩ</h1>
                 </div>
@@ -54,9 +57,9 @@ const ListDoctor = () => {
                         <div>
                             <select name="gioitinh" id="gioitinh" className={styles.inputList}>
                                 <option value="">Name</option>
-                                {data?.map((item, index) => {
+                                {data?.map((item) => {
                                     return (
-                                        <option key={item.index} value={item.sex}>
+                                        <option key={item.id} value={item.sex}>
                                             {item.sex}
                                         </option>
                                     );
@@ -66,9 +69,9 @@ const ListDoctor = () => {
                         <div>
                             <select name="hamhoc" id="hamhoc" className={styles.inputList}>
                                 <option value="">Username</option>
-                                {data?.map((item, index) => {
+                                {data?.map((item) => {
                                     return (
-                                        <option key={item.index} value={item.full_name}>
+                                        <option key={item.id} value={item.full_name}>
                                             {item.full_name}
                                         </option>
                                     );
@@ -78,9 +81,9 @@ const ListDoctor = () => {
                         <div>
                             <select name="gioitinh" id="chuyenkhoa" className={styles.inputList}>
                                 <option value="">website</option>
-                                {data?.map((item, index) => {
+                                {data?.map((item) => {
                                     return (
-                                        <option key={item.index} value={item.role}>
+                                        <option key={item.id} value={item.role}>
                                             {item.role}
                                         </option>
                                     );
@@ -90,9 +93,9 @@ const ListDoctor = () => {
                         <div>
                             <select name="lich" id="lichkham" className={styles.inputList}>
                                 <option value="">Phone</option>
-                                {data?.map((item, index) => {
+                                {data?.map((item) => {
                                     return (
-                                        <option key={item.index} value={item.id}>
+                                        <option key={item.id} value={item.id}>
                                             {item.phone}
                                         </option>
                                     );

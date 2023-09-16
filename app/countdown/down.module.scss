@@ -1,0 +1,36 @@
+.countdownContainer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    .inputContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .inputGroup {
+            margin: 10px;
+            text-align: center;
+        }
+          
+        input {
+            width: 50px;
+        }
+          
+        button:hover {
+            background-color: #0056b3;
+        }
+    }
+    .buttonContainer {
+        margin-top: 20px;
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
+  
