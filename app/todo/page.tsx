@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './todu.module.scss';
 import { Prev } from 'react-bootstrap/esm/PageItem';
+import { forEach } from 'lodash';
 
 const Todo = () => {
     const [value, setValue] = useState('');
@@ -11,6 +12,7 @@ const Todo = () => {
         setTodo((Prev) => [...Prev, value]);
         setValue('');
     };
+
 
     return (
         <div className={styles.container}>

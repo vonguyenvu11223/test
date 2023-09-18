@@ -4,6 +4,7 @@ const headers = { Authorization: 'Bearer my-token', appId: 'medigo', hospitalId:
 const url = 'https://api-medigo-development.mdsco.vn';
 
 const instance = axios.create({
+    method: "GET",
     baseURL: url,
     headers: headers,
 });

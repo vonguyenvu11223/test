@@ -1,117 +1,63 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./components/shares/Modal/style.module.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.style_btn__BHohK {
-  background-color: #0259a0;
-  padding: 8px 24px;
-  border-radius: 3px;
-  color: white;
-  cursor: pointer;
-}
-
-.style_modal__899Mp {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
-  display: block;
-}
-.style_modal__899Mp .style_modalContent__e3Jyl {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  width: 512px;
-  border-radius: 3px;
-}
-.style_modal__899Mp .style_modalHeader__3Ym82 {
-  padding: 12px 24px;
-  text-align: center;
-  position: relative;
-}
-.style_modal__899Mp .style_modalClose___ERwG {
-  position: absolute;
-  background-color: gray;
-  color: white;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  border-radius: 50%;
-  top: -10px;
-  right: -10px;
-  cursor: pointer;
-}
-.style_modal__899Mp .style_modalBody__wujhI {
-  padding: 12px 24px 24px;
-}
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./components/screens/listdoctor/listDoctor.module.scss ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[5].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[5].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[5].oneOf[9].use[5]!./components/screens/listdoctor/listdoctor.module.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-.listDoctor_wrapper__fAu5N {
+.listdoctor_wrapper__GjTMW {
   background-color: white;
   color: black;
 }
-
-.listDoctor_name__2JMBY {
-  border-bottom: green;
-}
-
-.listDoctor_container__YiQdW {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.listDoctor_input__XYXpw {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_name__VQ8pz {
+  border-bottom: green;
+}
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_input__DFCbj {
   margin-top: 70px;
 }
-
-.listDoctor_inputname___cn7y {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_inputname__lvt8d {
   width: 1200px;
   background-color: white;
   border-radius: 5px;
   padding: 10px;
   outline: green;
 }
-
-.listDoctor_inputLists__veacG {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_inputLists__fXK3W {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-
-.listDoctor_inputList__7x8xr {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_inputList__AWrYQ {
   background-color: white;
   color: black;
   width: 290px;
   border-radius: 5px;
   padding: 8px;
 }
-
-.listDoctor_imgList__1G9t0 > img {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_imgList__DBAaw {
+  border: 2px solid aqua;
+  border-radius: 40%;
+  overflow: hidden;
+  background-color: aqua;
   width: 195px;
   height: 195px;
 }
-
-.listDoctor_listInfors__CSDcZ {
-  display: grid;
-  grid-gap: 50px 100px;
-  gap: 50px 100px;
-  grid-template-columns: auto auto auto;
-  background-color: #2196f3;
-  padding: 10px;
-  grid-column-gap: 10px;
-  column-gap: 10px;
-  margin-top: 10px;
-  width: 1200px;
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_imgList__DBAaw > img {
+  width: 200px;
+  height: 200px;
 }
-
-.listDoctor_listInfor__I102f {
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_listInfors__izclR {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_listInfor__Ov0dg {
   background-color: #ccc;
   width: 385px;
   height: 364px;
@@ -121,13 +67,39 @@
   justify-content: center;
   align-items: center;
 }
-
-.listDoctor_detail__qlhNV > button {
-  margin-top: 5px;
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_listInfor__Ov0dg:hover .listdoctor_detail__s0gLU > button {
+  display: block;
+}
+.listdoctor_wrapper__GjTMW .listdoctor_container__QIMgk .listdoctor_detail__s0gLU > button {
   background-color: green;
-  color: white;
+  color: #fff;
   height: 35px;
   width: 120px;
   border-radius: 5px;
   border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.listdoctor_page__DIBxk {
+  width: 100%;
+}
+.listdoctor_page__DIBxk ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  float: right;
+  margin-right: 9%;
+  text-decoration: none;
+}
+.listdoctor_page__DIBxk ul li {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #fff;
+  margin: 0 7px;
+  border-radius: 10px;
+}
+.listdoctor_page__DIBxk ul li:hover {
+  cursor: pointer;
+  background-color: aqua;
 }

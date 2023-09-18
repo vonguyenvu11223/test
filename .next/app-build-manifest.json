@@ -1,22 +1,22 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/todo/page": [
+    "/listDoctor/page1/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/todo/page.css",
-      "static/chunks/app/todo/page.js"
+      "static/css/app/listDoctor/page1/page.css",
+      "static/chunks/app/listDoctor/page1/page.js"
+    ],
+    "/listDoctor/page2/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/listDoctor/page2/page.css",
+      "static/chunks/app/listDoctor/page2/page.js"
     ],
     "/listDoctor/page": [
       "static/chunks/webpack.js",
@@ -24,17 +24,23 @@
       "static/css/app/listDoctor/page.css",
       "static/chunks/app/listDoctor/page.js"
     ],
-    "/countdown/page": [
+    "/listDoctor/page3/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/countdown/page.css",
-      "static/chunks/app/countdown/page.js"
+      "static/css/app/listDoctor/page3/page.css",
+      "static/chunks/app/listDoctor/page3/page.js"
     ],
-    "/masonry/page": [
+    "/listDoctor/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/masonry/page.css",
-      "static/chunks/app/masonry/page.js"
+      "static/css/app/listDoctor/layout.css",
+      "static/chunks/app/listDoctor/layout.js"
+    ],
+    "/listDoctor/page4/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/listDoctor/page4/page.css",
+      "static/chunks/app/listDoctor/page4/page.js"
     ]
   }
 }

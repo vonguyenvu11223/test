@@ -1,78 +1,115 @@
 .wrapper {
     background-color: white;
     color: black;
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .name {
+            border-bottom: green;
+        }
+        
+        .input {
+            margin-top: 70px;
+        }
+        
+        .inputname {
+            width: 1200px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            outline: green;
+        }
+        
+        .inputLists {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .inputList {
+            background-color: white;
+            color: black;
+            width: 290px;
+            border-radius: 5px;
+            padding: 8px;
+        }
+        
+        .imgList{
+            border: 2px solid aqua;
+            border-radius: 40%;
+            overflow: hidden;
+            background-color: aqua;
+            width: 195px;
+            height: 195px;
+        }
+
+        .imgList > img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .listInfors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .listInfor {
+            background-color: #ccc;
+            width: 385px;
+            height: 364px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                .detail > button{
+                    display: block;
+                }
+            }
+        }
+        
+        .detail > button {
+            // margin-top: 5px;
+            background-color: green;
+            color: #fff;
+            height: 35px;
+            width: 120px;
+            border-radius: 5px;
+            border: none;
+            display: none;
+            cursor: pointer;
+        }
+    }
 }
 
-.name {
-    border-bottom: green;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.input {
-    margin-top: 70px;
-}
-
-.inputname {
-    width: 1200px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    outline: green;
-}
-
-.inputLists {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.inputList {
-    background-color: white;
-    color: black;
-    width: 290px;
-    border-radius: 5px;
-    padding: 8px;
-}
-
-.imgList > img {
-    width: 195px;
-    height: 195px;
-}
-
-.listInfors {
-    display: grid;
-    gap: 50px 100px;
-    grid-template-columns: auto auto auto;
-    background-color: #2196f3;
-    padding: 10px;
-    column-gap: 10px;
-    margin-top: 10px;
-    width: 1200px;
-}
-
-.listInfor {
-    background-color: #ccc;
-    width: 385px;
-    height: 364px;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.detail > button {
-    margin-top: 5px;
-    background-color: green;
-    color: white;
-    height: 35px;
-    width: 120px;
-    border-radius: 5px;
-    border: none;
+.page{
+    width: 100%;
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        float: right;
+        margin-right: 9%;
+        text-decoration: none;
+        li{
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #fff;
+            margin: 0 7px;
+            border-radius: 10px;
+            &:hover{
+                cursor: pointer;
+                background-color: aqua;
+            }
+        }
+    }
 }
