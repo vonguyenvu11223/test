@@ -3,7 +3,12 @@ import { useEffect, useState } from 'react';
 import styles from './style.module.scss'
 import instance from '@/components/screens/listdoctor/instance';
 
-function Modal({ setShowModal, detail }) {
+interface Prop {
+    setShowModal: Dispatch<SetStateAction<boolean>>;
+    detail: never[];
+}
+
+function Modal({ setShowModal, detail }: Prop) {
     const [data, setData] = useState<any[]>([]);
     const [id, setId] = useState('');
     const [name, setName] = useState('');

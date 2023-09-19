@@ -26,9 +26,12 @@ const Page3 = () => {
             });
             setData(res.data.doctors);
             setSearch(res.data.doctors);
+            console.log(res.data.page);
+
         };
         api();
     }, []);
+
 
     const filter = (event: any) => {
         setSearch(data.filter(f => f.full_name.toLowerCase().includes(event.target.value)))
@@ -55,14 +58,9 @@ const Page3 = () => {
                     <div className={styles.inputLists}>
                         <div>
                             <select name="gioitinh" id="gioitinh" className={styles.inputList}>
-                                <option value="">Name</option>
-                                {data?.map((item) => {
-                                    return (
-                                        <option key={item.id} value={item.sex}>
-                                            {item.sex}
-                                        </option>
-                                    );
-                                })}
+                                <option value="">Giới tính</option>
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
                             </select>
                         </div>
                         <div>

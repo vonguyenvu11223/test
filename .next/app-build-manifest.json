@@ -6,12 +6,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/listDoctor/page1/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/listDoctor/page1/page.css",
-      "static/chunks/app/listDoctor/page1/page.js"
-    ],
     "/listDoctor/page2/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -23,6 +17,12 @@
       "static/chunks/main-app.js",
       "static/css/app/listDoctor/page.css",
       "static/chunks/app/listDoctor/page.js"
+    ],
+    "/listDoctor/page1/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/listDoctor/page1/page.css",
+      "static/chunks/app/listDoctor/page1/page.js"
     ],
     "/listDoctor/page3/page": [
       "static/chunks/webpack.js",

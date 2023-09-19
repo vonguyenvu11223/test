@@ -58,23 +58,23 @@ const Page1 = () => {
                     <div className={styles.inputLists}>
                         <div>
                             <select name="gioitinh" id="gioitinh" className={styles.inputList}>
-                                <option value="">Name</option>
+                                <option value="">Giới tính</option>
                                 {data?.map((item) => {
                                     return (
-                                        <option key={item.id} value={item.sex}>
-                                            {item.sex}
-                                        </option>
-                                    );
+                                        <option value={item.sex}>{item.sex}</option>
+                                    )
                                 })}
+                                {/* <option value="1">Nam</option>
+                                <option value="0">Nữ</option> */}
                             </select>
                         </div>
                         <div>
                             <select name="hamhoc" id="hamhoc" className={styles.inputList}>
-                                <option value="">Username</option>
+                                <option value="">Hàm học / Học vị</option>
                                 {data?.map((item) => {
                                     return (
-                                        <option key={item.id} value={item.full_name}>
-                                            {item.full_name}
+                                        <option key={item.id} value={item.role}>
+                                            {item.role}
                                         </option>
                                     );
                                 })}
@@ -82,7 +82,7 @@ const Page1 = () => {
                         </div>
                         <div>
                             <select name="gioitinh" id="chuyenkhoa" className={styles.inputList}>
-                                <option value="">website</option>
+                                <option value="">Chuyên khoa</option>
                                 {data?.map((item) => {
                                     return (
                                         <option key={item.id} value={item.role}>
@@ -94,14 +94,14 @@ const Page1 = () => {
                         </div>
                         <div>
                             <select name="lich" id="lichkham" className={styles.inputList}>
-                                <option value="">Phone</option>
-                                {data?.map((item) => {
-                                    return (
-                                        <option key={item.id} value={item.id}>
-                                            {item.phone}
-                                        </option>
-                                    );
-                                })}
+                                <option value="">Lịch khám</option>
+                                <option value="">Thứ 2</option>
+                                <option value="">Thứ 3</option>
+                                <option value="">Thứ 4</option>
+                                <option value="">Thứ 5</option>
+                                <option value="">Thứ 6</option>
+                                <option value="">Thứ 7</option>
+                                <option value="">CN</option>
                             </select>
                         </div>
                     </div>
