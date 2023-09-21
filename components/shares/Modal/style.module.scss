@@ -23,7 +23,7 @@
             text-align: center;
             position: relative;
 
-            h3{
+            h2{
                 border-bottom: 2px greenyellow solid;
                 font-size: 40px;
             }
@@ -43,25 +43,19 @@
         }
           
         .modalBody {
-            padding: 12px 24px 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            .imgList{
-                border: 2px solid aqua;
-                border-radius: 40%;
-                overflow: hidden;
-                background-color: aqua;
-                width: 195px;
-                height: 195px;
-                margin-bottom: 20px;
+            h2{
+                padding: 12px 24px 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 img{
                     width: 200px;
                     height: 200px;
+                    border-radius: 10px;
+                    border: 2px solid;
                 }
             }
-            
         }
     }
       

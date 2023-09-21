@@ -1,14 +1,59 @@
-.wrapper {
-  background-color: white;
-  color: black;
-}
+$text-color: #3caaaa;
 
-$textColor: yellow;
+.wrapper{
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 76px;
+  .header{
+    margin: 0 auto;
+    .top{
+      p{
+        border-radius: 7px;
+        color: $text-color;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.03);
+        width: 10%;
+        font-size: 20px;
+      }
+    }
+    .login{
+      background-color: #ccc;
+      float: right;
+      color: $text-color;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  }
 
-.header {
-  background-color: blue;
-
-  h1 {
-    color: $textColor;
+  .content{
+    background-color: #ccc;
+    .contentTop{
+      .contentTopT{
+        margin-top: 50px;
+        // height: 50px;
+        ul{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          li{
+            list-style: none;
+            color: $text-color;
+            padding: 10px;
+            border-radius: 8px;
+            &:hover{
+              background-color: $text-color;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .contentTopB{
+        margin-top: 10px;
+      }
+    }
   }
 }

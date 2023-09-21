@@ -1,24 +1,38 @@
+
 .container {
-    background-color: #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
     height: 60px;
     display: flex;
     width: 100%;
     flex-direction: row;
-
+    height: auto;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
     .wrapper {
-        width: 100%;
-
+        top: 20%;
+        width: 85%;
+        margin: 0 auto;
         ul {
+            list-style: none;
+            padding: 5px;
+            margin-left: 5px;
             display: flex;
-            li {
-                list-style: none;
-                padding: 20px;
-                margin-left: 5px;
-                a {
-                    text-decoration: none;
+            align-items: center;
+            justify-content: space-between;
+            .left {
+                img{
+                    width: 56px;
+                    height: 56px;
+                    cursor: pointer;
                 }
-                &:hover {
-                    background-color: aqua;
+            }
+            .right{
+                a{
+                    text-decoration: none;
+                    color: #3caaaa;
+                    padding: 10px;
                 }
             }
         }

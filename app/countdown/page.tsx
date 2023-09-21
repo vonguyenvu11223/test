@@ -2,29 +2,23 @@
 import { useEffect, useState } from 'react';
 import useCountDown from './useCountdown';
 import moment from 'moment';
-
+import styles from './down.module.scss'
 
 const Countdown = () => {
-    const [timeThen, setTimeThen] = useState(moment().add('minutes', 2).format('YYYY-MM-DD HH:mm'))
+    const [timeThen, setTimeThen] = useState(moment().format('YYYY-MM-DD HH:mm'))
 
     const { setFlag, remaining } = useCountDown(timeThen);
 
-
-    console.log('timeThen', timeThen)
     const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTimeThen(e.target.value);
-        console.log('e.target.value', e.target.value)
     };
 
     const handleStartCountdown = () => {
         setFlag(prev => !prev)
     };
 
-    console.log('remaining', remaining)
-
-
     return (
-        <div>
+        <div className={styles.container}>
             <h1 >Countdown Timer Page</h1>
             <div>
                 <label>
@@ -36,7 +30,6 @@ const Countdown = () => {
             <div>
                 <pre>
                     <h2>Days:{remaining.days} Hour:{remaining.hours} Minute:{remaining.minutes} Second:{remaining.seconds}</h2>
-                    {/* {JSON.stringify(remaining)} */}
                 </pre>
             </div>
         </div>

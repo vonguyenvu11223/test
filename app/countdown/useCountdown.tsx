@@ -65,7 +65,6 @@ function useCountDown(thenTime: string) {
 
     }, [flag]);
 
-
     return {
         setFlag,
         remaining

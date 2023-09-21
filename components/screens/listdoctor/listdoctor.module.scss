@@ -1,7 +1,7 @@
 .wrapper {
     background-color: white;
     color: black;
-    
+    margin-top: 76px;
     .container {
         display: flex;
         justify-content: center;
@@ -27,14 +27,13 @@
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
-        }
-        
-        .inputList {
-            background-color: white;
-            color: black;
-            width: 290px;
-            border-radius: 5px;
-            padding: 8px;
+            .inputList {
+                background-color: white;
+                color: black;
+                width: 290px;
+                border-radius: 5px;
+                padding: 8px;
+            }
         }
         
         .imgList{

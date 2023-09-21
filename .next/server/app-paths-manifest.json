@@ -1,6 +1,7 @@
 {
   "/page": "app/page.js",
-  "/masonry/page": "app/masonry/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/listDoctor/page": "app/listDoctor/page.js",
-  "/todo/page": "app/todo/page.js"
+  "/countdown/page": "app/countdown/page.js",
+  "/masonry/page": "app/masonry/page.js"
 }
