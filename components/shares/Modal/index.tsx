@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import styles from './style.module.scss'
 import instance from '@/components/screens/listdoctor/instance';
 

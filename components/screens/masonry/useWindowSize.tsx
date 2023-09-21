@@ -2,10 +2,12 @@
 import { useEffect, useState } from 'react';
 
 export function useWindowSize() {
+
+    const width = document.getElementById('right')?.clientWidth;
+
     function getSize() {
         return {
-            width: window.innerWidth,
-            height: window.innerHeight,
+            width
         };
     }
 
@@ -15,6 +17,7 @@ export function useWindowSize() {
         function handleResize() {
             setWindowSize(getSize());
         }
+
         handleResize();
 
         window.addEventListener('orientationchange', handleResize);
@@ -28,7 +31,8 @@ export function useWindowSize() {
             window.removeEventListener('load', handleResize);
             window.removeEventListener('reload', handleResize);
         };
-    }, []);
+
+    }, [width]);
 
     return windowSize;
 }

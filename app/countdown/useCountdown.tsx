@@ -1,45 +1,78 @@
-'use client'
-import { useState, useEffect } from "react";
+import moment from 'moment';
+import { useEffect, useRef, useState } from 'react';
 
-export function useCountdown(initialTime: any) {
+type Time = {
+    readonly days: string | number;
+    readonly hours: string | number;
+    readonly minutes: string | number;
+    readonly seconds: string | number;
+}
 
-    const [timeLeft, setTimeLeft] = useState(initialTime);
-    const [isActive, setIsActive] = useState(false);
+function useCountDown(thenTime: string) {
+    const init = {
+        days: 0, hours: 0, minutes: 0, seconds: 0
+    }
+    const [flag, setFlag] = useState(false)
+    const [remaining, setRemaining] = useState<Time>(init)
+    const interval = useRef<NodeJS.Timeout>()
 
-    console.log(timeLeft);
+    const countDown = () => {
+
+
+        interval.current = setInterval(() => {
+
+            const then = moment(thenTime);
+            const now = moment();
+            const timeDiff = then.diff(now);
+            const duration = moment.duration(timeDiff)
+            console.log('duration', duration)
+            const days = duration.days();
+            const hours = duration.hours().toString().padStart(2, '0');
+            const minutes = duration.minutes().toString().padStart(2, '0');
+            const seconds = duration.seconds().toString().padStart(2, '0');
+
+            setRemaining({
+                days, hours, minutes, seconds
+            })
+
+            console.log('duration.asSeconds()', duration.asSeconds())
+
+            if (timeDiff < 1) {
+                clearInterval(interval.current);
+                setRemaining(init)
+            }
+
+        }, 1000);
+    }
+
 
     useEffect(() => {
-        let interval: any;
+        countDown();
+    }, []);
 
-        if (isActive && timeLeft > 0) {
-            interval = setInterval(() => {
-                setTimeLeft((prevTime: any) => prevTime - 1);
-            }, 1000);
-        } else if (!isActive && timeLeft !== 0) {
-            clearInterval(interval);
+    useEffect(() => {
+
+        if (!flag) {
+            clearInterval(interval.current)
+        }
+        else {
+            countDown();
         }
 
-        return () => clearInterval(interval);
-    }, [isActive, timeLeft]);
+        return () => {
+            clearInterval(interval.current)
+        }
 
-    const startCountdown = () => {
-        setIsActive(true);
-    };
+    }, [flag]);
 
-    const pauseCountdown = () => {
-        setIsActive(false);
-    };
-
-    const resetCountdown = () => {
-        setIsActive(false);
-        setTimeLeft(initialTime);
-    };
 
     return {
-        timeLeft,
-        isActive,
-        startCountdown,
-        pauseCountdown,
-        resetCountdown,
+        setFlag,
+        remaining
     };
 }
+
+export default useCountDown;
+
+
+

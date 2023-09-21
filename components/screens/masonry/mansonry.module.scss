@@ -1,4 +1,12 @@
 .container {
+
+    display: flex;
+    flex-direction: row;
+
+    .left{
+        min-width: 30%;
+    }
+    .right{
     .list {
         display: flex;
         flex-wrap: wrap;
@@ -20,4 +28,5 @@
             }
         }
     }
+}
 }

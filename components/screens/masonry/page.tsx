@@ -1,6 +1,5 @@
 'use client';
-import cx from 'classnames';
-import { CSSProperties, useEffect, useState } from 'react';
+import { CSSProperties } from 'react';
 import styles from './mansonry.module.scss';
 import { useWindowSize } from './useWindowSize';
 
@@ -19,13 +18,17 @@ const items = [
     '12.Nhưng đối với Masonry Layout, các element sẽ được đưa vào các cột có chiều rộng (Width) được quy định sẵn, các element có chiều cao (Height) khác nhau nằm chung một cột sẽ được xếp vào mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trò chơi xếp gạch – Tetris vậy',
     '13.Nhưng đối với Masonry Layout, các element sẽ được đưa vào các cột có chiều rộng (Width) được quy định sẵn, các element có chiều cao (Height) khác nhau nằm chung một cột sẽ được xếp vào mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trò chơi xếp gạch – Tetris vậy',
     '14.mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trò chơi xếp gạch – Tetris vậy',
+    '15.mà không tạo ra khoảng  – Tetris vậy',
+    '16.mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống trò chơi xếp gạch – Tetris vậy',
+    '17.mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trò chetris vậy',
+    '18.mà không tạo ra khoảng trống do khác hàng. Các bạn cứ tưởng tượng Masonry giống như trò chơi xếp gạch – Tetrtrống do khác hàng. Các bạn cứ tưởng tượng Masonry giống is vậy',
 ];
 
 const Masonry = () => {
-    const { width, height } = useWindowSize();
+    const { width } = useWindowSize();
 
     const getColumns = () => {
-        const screenWidth = width;
+        const screenWidth: any = width;
         if (screenWidth < 500) {
             return 1;
         } else if (screenWidth < 600) {
@@ -43,25 +46,31 @@ const Masonry = () => {
 
     const buttonStyle = {
         width: `calc(100% / ${columns} - ${(columns - 1) / columns} * 1rem)`,
-    };
+    } as CSSProperties;
 
     return (
         <div className={styles.container}>
-            <ul className={styles.list}>
-                {list.map((column, index) => {
-                    return (
-                        <li key={index} style={buttonStyle} className={styles.column}>
-                            {column.map((item, key) => {
-                                return (
-                                    <div key={key} className={styles.item}>
-                                        {item}
-                                    </div>
-                                );
-                            })}
-                        </li>
-                    );
-                })}
-            </ul>
+            <div className={styles.left} id='left'>
+                <p>
+                    helo
+                </p>
+            </div>
+            <div className={styles.right} id='right'>
+                <ul className={styles.list}>
+                    {list.map((column, index) => {
+                        return (
+                            <li key={index} style={buttonStyle} className={styles.column}>
+                                {column.map((item, key) => {
+                                    return (
+                                        <div key={key} className={styles.item}>
+                                            {item}
+                                        </div>
+                                    );
+                                })}
+                            </li>
+                        );
+                    })}
+                </ul></div>
         </div>
     );
 };

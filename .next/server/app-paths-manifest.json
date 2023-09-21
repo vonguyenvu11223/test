@@ -1,6 +1,6 @@
 {
-  "/listDoctor/page3/page": "app/listDoctor/page3/page.js",
-  "/listDoctor/page4/page": "app/listDoctor/page4/page.js",
-  "/listDoctor/page1/page": "app/listDoctor/page1/page.js",
-  "/listDoctor/page2/page": "app/listDoctor/page2/page.js"
+  "/page": "app/page.js",
+  "/masonry/page": "app/masonry/page.js",
+  "/listDoctor/page": "app/listDoctor/page.js",
+  "/todo/page": "app/todo/page.js"
 }
