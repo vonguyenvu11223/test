@@ -1,27 +1,30 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import classNames from 'classnames/bind';
 import styles from './listdoctor.module.scss'
 import instance from '@/components/shares/instance/instance';
-import Pagination from '@/components/shares/paginate/index';
 import ModalDoctor from './modal';
 import Search from './search';
 import FilterSelect from './filterSelect';
+import { useRouter } from "next/navigation";
+import Pagination from '@/components/shares/paginate/index'
+import Link from "next/link";
 
 const cx = classNames.bind(styles);
 
 const ListDoctor = () => {
     const [data, setData] = useState<any[]>([]);
     const [showModal, setShowModal] = useState(false);
-    const [array, setArray] = useState([]);
     const [detail, setDetail] = useState([]);
-    const [pages, setPages] = useState(1)
-    const [selectedFilter, setSelectedFilter] = useState('');
     const [search, setSearch] = useState<any[]>([]);
+    const router = useRouter();
+    const [pages, setPages] = useState(1);
+
+    const PER_PAGE = 9;
 
     useEffect(() => {
         const api = async () => {
-            const res = await instance.get('/doctors/list?limit=9', {
+            const res = await instance.get(`/doctors/list?limit=${PER_PAGE}`, {
                 params: {
                     page: pages,
                 }
@@ -30,6 +33,7 @@ const ListDoctor = () => {
             setSearch(res.data.doctors);
         };
         api();
+        handleRouter();
     }, [pages]);
 
     // Handle page change
@@ -37,6 +41,10 @@ const ListDoctor = () => {
         setPages(newpage)
     }
 
+    // pagination
+    const handleRouter = () => {
+        router.push(`/listDoctor?page=${pages}`);
+    }
 
     return (
         <div className={cx('wrapper')}>
@@ -70,9 +78,6 @@ const ListDoctor = () => {
                                 <div className={styles.nameList}>
                                     <p>{item.full_name}</p>
                                 </div>
-                                <div className={styles.nameList}>
-                                    <p>{item.sex}</p>
-                                </div>
                                 <div className={styles.detail}>
                                     <button onClick={() => {
                                         setShowModal(true);
@@ -86,6 +91,7 @@ const ListDoctor = () => {
                 <div></div>
             </div>
             <Pagination
+                click={handleRouter}
                 value={pages}
                 onPageChange={handlePageChange}
             />

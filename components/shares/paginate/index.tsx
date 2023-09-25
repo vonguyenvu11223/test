@@ -1,13 +1,13 @@
 'use client'
 import styles from './paginate.module.scss';
-
+import Link from "next/link";
 interface Props {
     onPageChange: any,
-    value: any
+    value: any,
+    click: any
 }
 
-
-function Pagination({ onPageChange, value }: Props) {
+function Pagination({ onPageChange, value, click }: Props) {
 
     const handlePageChange = (newpage: any) => {
         if (onPageChange) {
@@ -22,6 +22,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value - 1);
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 &lt;
@@ -31,6 +32,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value = 1);
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 1
@@ -40,6 +42,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value = 2);
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 2
@@ -49,6 +52,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value = 3);
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 3
@@ -58,6 +62,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value = 4);
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 4
@@ -68,6 +73,7 @@ function Pagination({ onPageChange, value }: Props) {
                 onClick={() => {
                     handlePageChange(value + 1)
                     window.scrollTo(0, 0);
+                    click();
                 }}
             >
                 &gt;
@@ -77,3 +83,4 @@ function Pagination({ onPageChange, value }: Props) {
 }
 
 export default Pagination;
+

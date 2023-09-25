@@ -38,6 +38,11 @@ function Head() {
                                     Todo
                                 </Link>
                             </li>
+                            <li>
+                                <Link href={'/pagination'} className="nav-link">
+                                    Pagination
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                 </ul>

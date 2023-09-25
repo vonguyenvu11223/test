@@ -43,9 +43,18 @@ export default function Home() {
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className={styles.contentMid}></div>
-        <div className={styles.contentBottom}></div>
+      {/* take care */}
+      <div className={styles.takecare}>
+        <div className={styles.header}>
+
+        </div>
+        <div className={styles.takeItem}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   )

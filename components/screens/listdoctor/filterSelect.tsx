@@ -11,8 +11,8 @@ function FilterSelect({ data, setSearch }: Props) {
     const role = [...new Set(data.map(item => item.role))];
     const sex = [...new Set(data.map(item => item.sex))];
 
-    const handleSelectChangeRole = (e: any) => {
-        setSearch(data.filter((f: { role: string | any[] }) => f.role.includes(e.target.value)));
+    const handleSelectChangeRole = (event: any) => {
+        setSearch(data.filter((f: { role: string | any[] }) => f.role.includes(event.target.value)));
     }
 
     // handle filter select
@@ -35,7 +35,9 @@ function FilterSelect({ data, setSearch }: Props) {
             <Select
                 title='Chuyên khoa'
                 value={role}
-                handleSelectChangeRole={handleSelectChangeRole}
+                {...{
+                    handleSelectChangeRole
+                }}
             />
             <Select
                 title='Lịch khám'
