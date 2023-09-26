@@ -1,7 +1,4 @@
 {
   "/page": "app/page.js",
-  "/listDoctor/page": "app/listDoctor/page.js",
-  "/countdown/page": "app/countdown/page.js",
-  "/todo/page": "app/todo/page.js",
-  "/masonry/page": "app/masonry/page.js"
+  "/listDoctor/page": "app/listDoctor/page.js"
 }

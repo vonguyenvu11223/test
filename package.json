@@ -11,6 +11,7 @@
   "dependencies": {
     "@etchteam/next-pagination": "^3.5.5",
     "@nextui-org/react": "2.1.12",
+    "@reduxjs/toolkit": "^1.9.6",
     "@types/lodash": "^4.14.198",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
@@ -31,6 +32,8 @@
     "react-masonry-css": "^1.0.16",
     "react-paginate": "^8.2.0",
     "react-query": "^3.39.3",
+    "react-redux": "^8.1.2",
+    "redux-saga": "^1.2.3",
     "sass": "^1.66.1",
     "typescript": "5.2.2"
   }

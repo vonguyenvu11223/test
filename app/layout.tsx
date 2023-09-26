@@ -4,6 +4,8 @@ import { Inter } from 'next/font/google';
 import moment from 'moment';
 import Header from '@/components/cores/header';
 import Footer from '@/components/cores/footer';
+import { Provider } from 'react-redux';
+import { store } from './store'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,9 +18,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" style={{ backgroundColor: 'white' }}>
             <body className={inter.className}>
-                <Header />
-                {children}
-                <Footer />
+                <Provider store={store}>
+                    <Header />
+                    {children}
+                    <Footer />
+                </Provider>
             </body>
         </html>
     );
